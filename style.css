@@ -6,3 +6,23 @@
     padding: 0px;
     margin-top: 0px;
 }
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.today-weather-left{
+    float:left;
+    text-align : center;
+    width:35%;
+    border-right: 2px solid;
+}
+
+.today-weather-left h2{
+    text-align : center;
+}
+
+.today-weather-right{
+    margin-left: 18px;
+    float:left;
+}
