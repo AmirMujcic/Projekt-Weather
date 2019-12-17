@@ -1,21 +1,23 @@
 .container{
-    background-color: aqua;
+    
     width:70%;
     margin: auto;
-    height: 700px;
+    
     padding: 0px;
     margin-top: 0px;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
 }
 
 .today-weather-left{
     float:left;
     text-align : center;
-    width:35%;
+    width:33%;
     border-right: 2px solid;
+    height:200px;
 }
 
 .today-weather-left h2{
@@ -24,5 +26,9 @@ body{
 
 .today-weather-right{
     margin-left: 18px;
+    margin-right: 18px;
+    width:33%;
     float:left;
+    border-right: 2px solid;
+    height:200px;
 }
