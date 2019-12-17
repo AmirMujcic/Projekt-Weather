@@ -21,12 +21,31 @@ $(function(){
     $.ajax({
         type:'GET',
         url: 'https://api.darksky.net/forecast/9d0b14bb921af097bd83266cd451be2c/44.2033523,17.9275785?exclude=currently,minutely,hourly,alerts,flags&units=si',
-        dataType:'json',
+        dataType:'jsonp',
         success: function(data){
-            data = $.parseJSON(data);
-            
+            for(i=1;i<6;i++){
+                
+                var date = new Date(data.daily.data[i].time*1000);
+                console.log(i,date)
+                var dayNum = date.getDay()
+                var weekArray = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+                var day = $('<h5 style = "text-align:center">'+ weekArray[dayNum]+'</h5>')
+                $('#day'+i).append(day);
+
+                
+                var summary = $('<p style = "font-size: 12px; text-align:center; font-weight:bold;">' + data.daily.data[i].summary + '</p>');
+                $('#day'+i).append(summary);
+
+                
+                var temp = $('<h6> Min Temp ' + data.daily.data[i].temperatureLow + '°C - Max Temp ' + data.daily.data[i].temperatureHigh + '°C</h6>')
+                $('#day'+i).append(temp);
+
+                var wind = $('<h6>Wind speed: '+data.daily.data[i].windSpeed+'m/s </h6>');
+                $('#day'+i).append(wind);
+            }
             
         }
 
-    })            
+    })
+    
 })

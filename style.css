@@ -5,11 +5,12 @@
     
     padding: 0px;
     margin-top: 0px;
+    position: relative;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #9b9595;
 }
 
 .today-weather-left{
@@ -18,6 +19,7 @@ body{
     width:33%;
     border-right: 2px solid;
     height:200px;
+    position: relative;
 }
 
 .today-weather-left h2{
@@ -31,4 +33,42 @@ body{
     float:left;
     border-right: 2px solid;
     height:200px;
+    position: relative;
+}
+
+.five-days{
+    position: relative;
+    
+    width: 100%;
+    height: 100px;
+}
+
+.today{
+    position: relative;
+    height:200px;
+
+}
+
+
+
+.today-weather-details{
+    position: relative;
+    padding:5px
+}
+
+
+
+.panel{
+    width:19%;
+    float:left;
+    margin-top:30px;
+    position: relative;
+    border-left: 1px solid;
+    height: 220px;
+    padding:2px;
+    text-align: center;
+}
+
+#day5{
+    border-right:1px solid;
 }
